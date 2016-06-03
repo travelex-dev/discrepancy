@@ -14,3 +14,25 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+/*
+Route::get('/', function () {
+	$people = ['Oliver','Anij','Sebastiaan'];
+
+    return view('welcome')->with('people', $people);
+});
+
+Route::get('about', function () {
+    return view('pages/about');
+});
+
+Route::get('/', 'PagesController@home');
+Route::get('/addError', 'PagesController@about');
+Route::get('/cards', 'CardsController@index');
+Route::get('/cards/{card}', 'CardsController@show');
+Route::post('/cards/{card}/notes', 'NotesController@store');
+Route::get('/notes/{note}/edit', 'NotesController@edit');
+Route::patch('/notes/{note}', 'NotesController@update');
+*/
+
+?>
