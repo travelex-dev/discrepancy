@@ -95,12 +95,12 @@ return [
 
     'key' => env('APP_KEY', 'SomeRandomString'),
  
-<<<<<<< HEAD
-'cipher' => 'AES-256-CBC',
 
-=======
     'cipher' => 'AES-256-CBC',
->>>>>>> origin/master
+
+
+
+
 
 
     /*
