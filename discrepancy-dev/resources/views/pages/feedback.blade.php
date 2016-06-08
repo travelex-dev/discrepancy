@@ -1,25 +1,7 @@
-<!DOCTYPE html>
+@extends('app')
 
-<html lang="en">
-	<head>
-		<title>Taxidia - Errors</title>
-
-		<!-- BEGIN META -->
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="keywords" content="your,keywords">
-		<meta name="description" content="Short explanation about this website">
-		<!-- END META -->
-
-		<!-- BEGIN STYLESHEETS -->
-		<link href='http://fonts.googleapis.com/css?family=Roboto:300italic,400italic,300,400,500,700,900' rel='stylesheet' type='text/css'/>
-		<link type="text/css" rel="stylesheet" href="../../assets/css/theme-default/bootstrap.css?1422792965" />
-		<link type="text/css" rel="stylesheet" href="../../assets/css/theme-default/materialadmin.css?1425466319" />
-		<link type="text/css" rel="stylesheet" href="../../assets/css/theme-default/font-awesome.min.css?1422529194" />
-		<link type="text/css" rel="stylesheet" href="../../assets/css/theme-default/material-design-iconic-font.min.css?1421434286" />
-		<link type="text/css" rel="stylesheet" href="../../assets/css/theme-default/libs/wizard/wizard.css?1425466601" />
-		<!-- END STYLESHEETS -->
-	</head>
+@section('content')
+	
 	<body class="menubar-hoverable header-fixed menubar-pin ">
 		<!-- BEGIN HEADER-->
 		<header id="header" >
@@ -41,7 +23,6 @@
 						</li>
 					</ul>
 				</div>
-
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="headerbar-right">
 					<ul class="header-nav header-nav-options">	
@@ -61,7 +42,7 @@
 								<li><a href="../../html/pages/blog/post.html">My blog <span class="badge style-danger pull-right">16</span></a></li>
 								<li><a href="../../html/pages/calendar.html">My appointments</a></li>
 								<li><a href="../../html/pages/bugreport.html">Bug Report</a></li>
-								<li><a href="../../html/pages/feedback.html">Give Feedback</a></li>
+								<li><a href="../../html/pages/feedback.html">Feedback</a></li>
 								<li class="divider"></li>
 								<li><a href="../../html/pages/locked.html"><i class="fa fa-fw fa-lock"></i> Lock</a></li>
 								<li><a href="../../html/pages/login.html"><i class="fa fa-fw fa-power-off text-danger"></i> Logout</a></li>
@@ -76,17 +57,15 @@
 						</li>
 					</ul><!--end .header-nav-toggle -->
 				</div><!--end #header-navbar-collapse -->
-			</div>  <!-- end headerbar -->
+			</div><!--end .headerbar -->
 		</header>
 		<!-- END HEADER-->
-
 		<!-- BEGIN BASE-->
 		<div id="base">
 			<!-- BEGIN OFFCANVAS LEFT -->
 			<div class="offcanvas">
 			</div><!--end .offcanvas-->
 			<!-- END OFFCANVAS LEFT -->
-			
 			<!-- BEGIN CONTENT-->
 			<div id="content">
 				<!-- BEGIN BLANK SECTION -->
@@ -94,37 +73,36 @@
 					<div class="section-header">
 						<ol class="breadcrumb">
 							<li><a href="../../html/.html">home</a></li>
-							<li class="active">Bug Report</li>
+							<li class="active">Feedback</li>
 						</ol>
-					</div><!--end .section-header -->				
+					</div><!--end .section-header -->
 					<div class="section-body">
 						<div class="card">
 							<div class="card-head style-primary">
-								<header>Please give details</header>   								    <!-- Page heading -->
+								<header>Please give feedback</header>                                     <!-- Form heading -->
 							</div>
-							<div class="card-body">	
-																									    <!-- BEGIN BUG REPORT SECTION -->		
+							<div class="card-body">				
+							<!-- BEGIN FEEDBACK SECTION -->				
 								<form class="form floating-label" action="../../html/pages/dashboard.html" accept-charset="utf-8" method="post">
-										<div class="form-group">
-											<input type="text" class="form-control" id="ProblemTitle">  <!-- Problem title textbox-->
-											<label for="ProblemTitle">Problem Title</label>
-										</div>
-										<div class="form-group">
-											<textarea name="SummaryInformation" id="SummaryInformation" class="form-control" rows="3" placeholder=""></textarea>
-											<label for="SummaryInformation">Summary Information</label>  <!-- Summary information textbox -->
-										</div>								
-										<div class="card-actionbar">
-											<div class="card-actionbar-row">
-												<button class="btn btn-primary btn-raised" type="submit">SUBMIT</button> <!-- Submit button-->
-											</div>
-										</div>		
-								</form>	<!-- END BUG REPORT SECTION -->					
+									<div class="form-group">
+										<input type="text" class="form-control" id="Title">               <!-- Title textbox -->
+										<label for="Title">Title</label>
+									</div>
+									<div class="form-group">
+										<textarea name="Description" id="Description" class="form-control" rows="3" placeholder=""></textarea>                                           
+										<label for="Description">Description</label>                      <!-- Description textbox -->
+									</div>
+								</form>
 							</div><!--end .card-body -->
-						</div> <!--end .card -->
-					</div><!--end .section-body-->
-				</section> <!--end section-->
-			</div><!--end #content-->
-
+							<div class="card-actionbar">
+								<div class="card-actionbar-row">
+									<button class="btn btn-primary btn-raised" type="submit">SEND</button> <!-- Submit button-->
+								</div>
+							</div>
+						</div><!--end .card --><!-- END FEEDBACK SECTION -->			
+					</div><!--end .section-body -->
+				</section>
+			</div>
 			<!-- BEGIN MENUBAR-->
 			<div id="menubar" class="menubar-inverse ">
 				<div class="menubar-fixed-panel">
@@ -144,7 +122,7 @@
 					<ul id="main-menu" class="gui-controls">
 						<!-- BEGIN DASHBOARD -->
 						<li>
-							<a href="overview" >
+							<a href="#" >
 								<div class="gui-icon"><i class="md md-home"></i></div>
 								<span class="title">Dashboard</span>
 							</a>
@@ -157,13 +135,9 @@
 							</a>
 							<!--start submenu -->
 							<ul>
-								<li><a href="adderror"><span class="title">Raise Error</span></a></li>
-								<li><a href="currencyoverview"><span class="title">Currency Overview</span></a></li>
-								<li><a href="errordetails"><span class="title">Error Details</span></a></li>
-								<li><a href="listdocumenterrors"><span class="title">List Document Errors</span></a></li>
-								<li><a href="investigatingerrors"><span class="title">Investigating Errors</span></a></li>
-								<li><a href="bugreport"><span class="title">Report a Bug</span></a></li>
-								<li><a href="feedback"><span class="title">Leave Feedback</span></a></li>
+								<li><a href="../../html/pages/dashboard.html"><span class="title">Dashboard</span></a></li>
+								<li class="active expanded"><a href="../../html/pages/overview.html" class="active"><span class="title">overview</span></a></li>
+								<li><a href="../../html/pages/currencyoverview.html"><span class="title">Currency Overview</span></a></li>
 							</ul><!--end /submenu -->
 						</li>
 					</ul>
@@ -177,23 +151,5 @@
 			<!-- END MENUBAR -->
 		</div><!--end #base-->
 		<!-- END BASE -->
-
-		<!-- BEGIN JAVASCRIPT -->
-		<script src="../../assets/js/libs/jquery/jquery-1.11.2.min.js"></script>
-		<script src="../../assets/js/libs/jquery/jquery-migrate-1.2.1.min.js"></script>
-		<script src="../../assets/js/libs/bootstrap/bootstrap.min.js"></script>
-		<script src="../../assets/js/libs/spin.js/spin.min.js"></script>
-		<script src="../../assets/js/libs/autosize/jquery.autosize.min.js"></script>
-		<script src="../../assets/js/libs/nanoscroller/jquery.nanoscroller.min.js"></script>
-		<script src="../../assets/js/core/source/App.js"></script>
-		<script src="../../assets/js/core/source/AppNavigation.js"></script>
-		<script src="../../assets/js/core/source/AppOffcanvas.js"></script>
-		<script src="../../assets/js/core/source/AppCard.js"></script>
-		<script src="../../assets/js/core/source/AppForm.js"></script>
-		<script src="../../assets/js/core/source/AppNavSearch.js"></script>
-		<script src="../../assets/js/core/source/AppVendor.js"></script>
-		<script src="../../assets/js/core/demo/Demo.js"></script>
-		<!-- END JAVASCRIPT -->
-	</body>
-</html>
-
+	
+@stop

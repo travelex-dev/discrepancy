@@ -1,28 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<title>Taxidia - Errors</title>
+@extends('app')
 
-		<!-- BEGIN META -->
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="keywords" content="your,keywords">
-		<meta name="description" content="Short explanation about this website">
-		<!-- END META -->
-
-		<!-- BEGIN STYLESHEETS -->
-		<link href='http://fonts.googleapis.com/css?family=Roboto:300italic,400italic,300,400,500,700,900' rel='stylesheet' type='text/css'/>
-		<link type="text/css" rel="stylesheet" href="../../assets/css/theme-default/bootstrap.css?1422792965" />
-		<link type="text/css" rel="stylesheet" href="../../assets/css/theme-default/materialadmin.css?1425466319" />
-		<link type="text/css" rel="stylesheet" href="../../assets/css/theme-default/font-awesome.min.css?1422529194" />
-		<link type="text/css" rel="stylesheet" href="../../assets/css/theme-default/material-design-iconic-font.min.css?1421434286" />
-		<link type="text/css" rel="stylesheet" href="../../assets/css/theme-default/libs/rickshaw/rickshaw.css?1422792967" />
-		<link type="text/css" rel="stylesheet" href="../../assets/css/theme-default/libs/morris/morris.core.css?1420463396" />
-
-
-		<!-- END STYLESHEETS -->
-	</head>
-	<body class="menubar-hoverable header-fixed menubar-pin ">
+@section('content')
 
 		<!-- BEGIN HEADER-->
 		<header id="header" >
@@ -174,14 +152,16 @@
 
 					<!-- BEGIN MAIN MENU -->
 					<ul id="main-menu" class="gui-controls">
+
 						<!-- BEGIN DASHBOARD -->
 						<li>
-							<a href="overview" >
+							<a href="#" >
 								<div class="gui-icon"><i class="md md-home"></i></div>
 								<span class="title">Dashboard</span>
 							</a>
 						</li><!--end /menu-li -->
 						<!-- END DASHBOARD -->
+
 						<li class="gui-folder active expanded">
 							<a>
 								<div class="gui-icon"><i class="fa fa-table"></i></div>
@@ -189,15 +169,12 @@
 							</a>
 							<!--start submenu -->
 							<ul>
-								<li><a href="adderror"><span class="title">Raise Error</span></a></li>
-								<li><a href="currencyoverview"><span class="title">Currency Overview</span></a></li>
-								<li><a href="errordetails"><span class="title">Error Details</span></a></li>
-								<li><a href="listdocumenterrors"><span class="title">List Document Errors</span></a></li>
-								<li><a href="investigatingerrors"><span class="title">Investigating Errors</span></a></li>
-								<li><a href="bugreport"><span class="title">Report a Bug</span></a></li>
-								<li><a href="feedback"><span class="title">Leave Feedback</span></a></li>
+								<li class="active expanded"><a href="../../html/pages/dashboard.html" class="active"><span class="title">Dashboard</span></a></li>
+								<li><a href="../../html/pages/overview.html"><span class="title">Overview</span></a></li>
 							</ul><!--end /submenu -->
 						</li>
+
+
 					</ul>
 
 					<div class="menubar-foot-panel">
@@ -212,36 +189,4 @@
 		</div><!--end #base-->
 		<!-- END BASE -->
 
-		<!-- BEGIN JAVASCRIPT -->
-		<script src="../../assets/js/libs/jquery/jquery-1.11.2.min.js"></script>
-		<script src="../../assets/js/libs/jquery/jquery-migrate-1.2.1.min.js"></script>
-		<script src="../../assets/js/libs/bootstrap/bootstrap.min.js"></script>
-		<script src="../../assets/js/libs/spin.js/spin.min.js"></script>
-		<script src="../../assets/js/libs/autosize/jquery.autosize.min.js"></script>
-		<script src="../../assets/js/libs/moment/moment.min.js"></script>
-		<script src="../../assets/js/libs/flot/jquery.flot.min.js"></script>
-		<script src="../../assets/js/libs/flot/jquery.flot.time.min.js"></script>
-		<script src="../../assets/js/libs/flot/jquery.flot.resize.min.js"></script>
-		<script src="../../assets/js/libs/flot/jquery.flot.orderBars.js"></script>
-		<script src="../../assets/js/libs/flot/jquery.flot.pie.js"></script>
-		<script src="../../assets/js/libs/flot/curvedLines.js"></script>
-		<script src="../../assets/js/libs/jquery-knob/jquery.knob.min.js"></script>
-		<script src="../../assets/js/libs/sparkline/jquery.sparkline.min.js"></script>
-		<script src="../../assets/js/libs/nanoscroller/jquery.nanoscroller.min.js"></script>
-		<script src="../../assets/js/libs/d3/d3.min.js"></script>
-		<script src="../../assets/js/libs/d3/d3.v3.js"></script>
-		<script src="../../assets/js/libs/rickshaw/rickshaw.min.js"></script>
-		<script src="../../assets/js/core/source/App.js"></script>
-		<script src="../../assets/js/core/source/AppNavigation.js"></script>
-		<script src="../../assets/js/core/source/AppOffcanvas.js"></script>
-		<script src="../../assets/js/core/source/AppCard.js"></script>
-		<script src="../../assets/js/core/source/AppForm.js"></script>
-		<script src="../../assets/js/core/source/AppNavSearch.js"></script>
-		<script src="../../assets/js/core/source/AppVendor.js"></script>
-		<script src="../../assets/js/core/demo/Demo.js"></script>
-		<script src="../../assets/js/core/demo/DemoDashboard.js"></script>
-
-		<!-- END JAVASCRIPT -->
-
-	</body>
-</html>
+@stop

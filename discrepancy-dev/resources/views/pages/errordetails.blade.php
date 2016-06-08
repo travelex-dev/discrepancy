@@ -1,24 +1,7 @@
-<!DOCTYPE html>
-<html lang="en"><head>
-<title>Taxidia - Errors</title>
-<!-- BEGIN META -->
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="keywords" content="your,keywords">
-<meta name="description" content="Short explanation about this website">
-<!-- END META -->
+@extends('app')
 
-<!-- BEGIN STYLESHEETS -->
-<link href="http://fonts.googleapis.com/css?family=Roboto:300italic,400italic,300,400,500,700,900" rel="stylesheet" type="text/css">
-<link type="text/css" rel="stylesheet" href="../../assets/css/theme-default/bootstrap.css?1422792965">
-<link type="text/css" rel="stylesheet" href="../../assets/css/theme-default/materialadmin.css?1425466319">
-<link type="text/css" rel="stylesheet" href="../../assets/css/theme-default/font-awesome.min.css?1422529194">
-<link type="text/css" rel="stylesheet" href="../../assets/css/theme-default/material-design-iconic-font.min.css?1421434286">
-<link type="text/css" rel="stylesheet" href="../../assets/css/theme-default/libs/wizard/wizard.css?1425466601">
+@section('content')
 
-<!-- END STYLESHEETS -->
-<style type="text/css"></style><style type="text/css"></style></head>
-<body class="menubar-hoverable header-fixed menubar-pin ">
 	<!-- BEGIN HEADER-->
 	<header id="header">
 		<div class="headerbar">
@@ -443,7 +426,7 @@
 				<ul id="main-menu" class="gui-controls">
 					<!-- BEGIN DASHBOARD -->
 					<li>
-						<a href="overview">
+						<a href="#">
 							<div class="gui-icon"><i class="md md-home"></i></div>
 							<span class="title">Dashboard</span>
 						</a>
@@ -472,23 +455,7 @@
 		<!-- END MENUBAR -->
 	</div><!--end #base-->
 	<!-- END BASE -->
-	<!-- BEGIN JAVASCRIPT -->
-	<script src="../../assets/js/libs/jquery/jquery-1.11.2.min.js"></script>
-	<script src="../../assets/js/libs/jquery/jquery-migrate-1.2.1.min.js"></script>
-	<script src="../../assets/js/libs/bootstrap/bootstrap.min.js"></script>
-	<script src="../../assets/js/libs/spin.js/spin.min.js"></script>
-	<script src="../../assets/js/libs/autosize/jquery.autosize.min.js"></script>
-	<script src="../../assets/js/libs/nanoscroller/jquery.nanoscroller.min.js"></script>
-	<script src="../../assets/js/core/source/App.js"></script>
-	<script src="../../assets/js/core/source/AppNavigation.js"></script>
-	<script src="../../assets/js/core/source/AppOffcanvas.js"></script>
-	<script src="../../assets/js/core/source/AppCard.js"></script>
-	<script src="../../assets/js/core/source/AppForm.js"></script>
-	<script src="../../assets/js/core/source/AppNavSearch.js"></script>
-	<script src="../../assets/js/core/source/AppVendor.js"></script>
-	<script src="../../assets/js/core/demo/Demo.js"></script>
-
-	<!-- END JAVASCRIPT -->
+	
 	<div id="device-breakpoints">
 		<div class="device-xs visible-xs" data-breakpoint="xs"></div>
 		<div class="device-sm visible-sm" data-breakpoint="sm"></div>
@@ -501,5 +468,4 @@
 	<div class="device-md visible-md" data-breakpoint="md"></div>
 	<div class="device-lg visible-lg" data-breakpoint="lg"></div>
 </div>
-</body>
-</html>
+@stop
