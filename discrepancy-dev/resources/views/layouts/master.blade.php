@@ -14,6 +14,11 @@
 		<!-- Content -->
 		@yield('content')
 
+		<!-- Menu Sidebar -->
+		@if(!Request::is('/'))
+			@include('includes.menu')
+		@endif
+
 		<!-- Footer -->
 		@include('includes.footer')
 
