@@ -393,7 +393,7 @@
 				</section>
 			</div><!--end #content-->
 			<!-- END CONTENT -->
-			<!-- BEGIN MENUBAR-->
+			<!-- BEGIN MENUBAR -->
 			<div id="menubar" class="menubar-inverse ">
 				<div class="menubar-fixed-panel">
 					<div>
