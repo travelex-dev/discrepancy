@@ -10,7 +10,7 @@ class ErrorDetailsController extends Controller
 {
     public function returnPage(){
         
-        	return view('errordetails');
+        	return view('pages/errordetails');
         
         }
 }

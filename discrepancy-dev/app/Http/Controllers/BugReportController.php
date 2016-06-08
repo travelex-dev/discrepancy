@@ -10,7 +10,7 @@ class BugReportController extends Controller
 {
     public function returnPage(){
         
-        	return view('bugreport');
+        	return view('pages/bugreport');
         
         }
 }

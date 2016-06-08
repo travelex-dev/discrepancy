@@ -10,7 +10,7 @@ class OverviewController extends Controller
 {
     public function returnPage(){
         
-        	return view('overview');
+        	return view('pages/overview');
         
         }
 }

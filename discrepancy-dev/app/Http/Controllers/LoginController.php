@@ -10,7 +10,7 @@ class LoginController extends Controller
 {
     public function returnPage(){
         
-        	return view('login');
+        	return view('pages/login');
         
         }
 }

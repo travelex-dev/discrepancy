@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>TAXIDIA - Create User</title>
+
+		<!-- BEGIN META -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="keywords" content="your,keywords">
+		<meta name="description" content="Short explanation about this website">
+		<!-- END META -->
+
+		<!-- BEGIN STYLESHEETS -->
+		<link href='http://fonts.googleapis.com/css?family=Roboto:300italic,400italic,300,400,500,700,900' rel='stylesheet' type='text/css'/>
+		<link type="text/css" rel="stylesheet" href="../../assets/css/theme-default/bootstrap.css?1422792965" />
+		<link type="text/css" rel="stylesheet" href="../../assets/css/theme-default/materialadmin.css?1425466319" />
+		<link type="text/css" rel="stylesheet" href="../../assets/css/theme-default/font-awesome.min.css?1422529194" />
+		<link type="text/css" rel="stylesheet" href="../../assets/css/theme-default/material-design-iconic-font.min.css?1421434286" />
+		<!-- END STYLESHEETS -->
+
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+		<script type="text/javascript" src="../../assets/js/libs/utils/html5shiv.js?1403934957"></script>
+		<script type="text/javascript" src="../../assets/js/libs/utils/respond.min.js?1403934956"></script>
+		<![endif]-->
+	</head>
+	<body class="menubar-hoverable header-fixed ">
+
+		<!-- BEGIN MAIN SECTION -->
+		<section class="section-account">
+			<div class="img-backdrop" style="background-image: url('../../assets/img/img16.jpg')"></div>
+			<div class="spacer"></div>
+			<div class="card contain-sm">	
+				<div class="card-head style-primary">
+					<header>Create an account</header>  <!-- Page heading -->
+				</div>	
+				<div class="card-body">	
+					<!-- BEGIN CREATE USER SECTION -->					
+					<form class="form floating-label" action="login" accept-charset="utf-8" method="get">  <!-- post -->
+						<div class="row">
+							<div class="col-sm-6">
+								<div class="form-group">
+									<input type="text" class="form-control" id="Firstname1" name="Firstname1"> <!-- First name textbox -->
+									<label for="Firstname1">Firstname</label>       
+								</div>
+							</div>
+							<div class="col-sm-6">
+								<div class="form-group">
+									<input type="text" class="form-control" id="Lastname1"> <!-- Last name textbox -->
+									<label for="Lastname1">Lastname</label>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+									<input type="text" class="form-control" id="Username1"> <!-- User name textbox -->
+									<label for="Username1">Username</label>
+						</div>
+						<div class="form-group">
+									<input type="password" class="form-control" id="Password1"> <!-- Password textbox -->
+									<label for="Password1">Password</label>
+						</div>
+						<div class="checkbox checkbox-styled">                                      
+									<label>
+										<input type="checkbox" value="">
+										<span>Send me weekly updates</span>
+									</label>
+						</div>
+						<div class="card-actionbar">
+							<div class="card-actionbar-row">
+								<button type="submit" class="btn btn-primary btn-raised">Create account</button> <!-- Submit button -->
+							</div>
+						</div>					
+					</form>					
+					<!-- END CREATE USER SECTION -->
+				</div><!--end .card-body -->
+			</div><!--end .card -->
+		</section>
+		<!-- END MAIN SECTION -->
+
+		<!-- BEGIN JAVASCRIPT -->
+		<script src="../../assets/js/libs/jquery/jquery-1.11.2.js"></script>
+		<script src="../../assets/js/libs/jquery/jquery-migrate-1.2.1.min.js"></script>
+		<script src="../../assets/js/libs/bootstrap/bootstrap.min.js"></script>
+		<script src="../../assets/js/libs/spin.js/spin.min.js"></script>
+		<script src="../../assets/js/libs/autosize/jquery.autosize.min.js"></script>
+		<script src="../../assets/js/libs/nanoscroller/jquery.nanoscroller.min.js"></script>
+		<script src="../../assets/js/core/source/App.js"></script>
+		<script src="../../assets/js/core/source/AppNavigation.js"></script>
+		<script src="../../assets/js/core/source/AppOffcanvas.js"></script>
+		<script src="../../assets/js/core/source/AppCard.js"></script>
+		<script src="../../assets/js/core/source/AppForm.js"></script>
+		<script src="../../assets/js/core/source/AppNavSearch.js"></script>
+		<script src="../../assets/js/core/source/AppVendor.js"></script>
+		<script src="../../assets/js/core/demo/Demo.js"></script>
+		<!-- END JAVASCRIPT -->
+
+	</body>
+</html>

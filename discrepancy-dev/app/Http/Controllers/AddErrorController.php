@@ -10,7 +10,7 @@ class AddErrorController extends Controller
 {
     public function returnPage(){
     
-    	return view('adderror');
+    	return view('pages/adderror');
     
     }
 }

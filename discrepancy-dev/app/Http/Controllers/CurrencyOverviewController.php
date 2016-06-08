@@ -10,7 +10,7 @@ class CurrencyOverviewController extends Controller
 {
     public function returnPage(){
         
-        	return view('currencyoverview');
+        	return view('pages/currencyoverview');
         
         }
 }
