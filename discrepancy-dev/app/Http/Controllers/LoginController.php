@@ -11,7 +11,7 @@ class LoginController extends Controller
 
     public function returnPage(){ //This function returns login page
         
-        	return view('login');
+        	return view('pages/login');
         
     }
 

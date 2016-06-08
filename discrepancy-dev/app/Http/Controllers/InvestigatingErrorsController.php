@@ -10,7 +10,7 @@ class InvestigatingErrorsController extends Controller
 {
     public function returnPage(){
         
-        	return view('investigatingerrors');
+        	return view('pages/investigatingerrors');
         
         }
 }

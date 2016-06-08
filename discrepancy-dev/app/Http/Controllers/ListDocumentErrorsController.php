@@ -10,7 +10,7 @@ class ListDocumentErrorsController extends Controller
 {
     public function returnPage(){
         
-        	return view('listdocumenterrors');
+        	return view('pages/listdocumenterrors');
         
         }
 }

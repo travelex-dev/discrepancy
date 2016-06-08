@@ -10,7 +10,7 @@ class FeedbackController extends Controller
 {
     public function returnPage(){
         
-        	return view('feedback');
+        	return view('pages/feedback');
         
         }
 }

@@ -10,7 +10,7 @@ class CreateUserController extends Controller
 {
     public function returnPage(){
         
-        	return view('createuser');
+        	return view('pages/createuser');
         
         }
 }

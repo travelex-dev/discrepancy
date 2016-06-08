@@ -10,7 +10,7 @@ class DashboardController extends Controller
 {
     public function returnPage(){
         
-        	return view('dashboard');
+        	return view('pages/dashboard');
         
         }
 }
