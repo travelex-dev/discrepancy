@@ -31,6 +31,21 @@
 		<script src="assets/js/libs/DataTables/jquery.dataTables.min.js"></script>
 		<script src="assets/js/libs/DataTables/extensions/ColVis/js/dataTables.colVis.min.js"></script>
 		<script src="assets/js/libs/DataTables/extensions/TableTools/js/dataTables.tableTools.min.js"></script>
+		<script src="assets/js/libs/jquery-validation/dist/jquery.validate.min.js"></script>
+		<script src="assets/js/libs/jquery-validation/dist/additional-methods.min.js"></script>
+		<script src="assets/js/libs/wizard/jquery.bootstrap.wizard.min.js"></script>
+		<script src="assets/js/core/demo/DemoFormWizard.js"></script>
+		<script src="assets/js/libs/jquery-ui/jquery-ui.min.js"></script>
+		<script src="assets/js/libs/select2/select2.min.js"></script>
+		<script src="assets/js/libs/bootstrap-tagsinput/bootstrap-tagsinput.min.js"></script>
+		<script src="assets/js/libs/multi-select/jquery.multi-select.js"></script>
+		<script src="assets/js/libs/inputmask/jquery.inputmask.bundle.min.js"></script>
+		<script src="assets/js/libs/moment/moment.min.js"></script>
+		<script src="assets/js/libs/bootstrap-datepicker/bootstrap-datepicker.js"></script>
+		<script src="assets/js/libs/bootstrap-colorpicker/bootstrap-colorpicker.min.js"></script>
+		<script src="assets/js/core/demo/DemoFormComponents.js"></script>
+		<script src="assets/js/core/demo/DemoTableDynamic.js"></script>
+		
 		<script type="text/javascript">	
 		    //Include the jquery table functionality for the table like search, page numbers, no of rows to be displayed
 			//and previous and next button to toggle between pages.
