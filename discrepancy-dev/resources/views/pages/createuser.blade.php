@@ -1,7 +1,6 @@
-@extends('app')
+@extends('layouts.master')
 
 @section('content')
-
 		<!-- BEGIN MAIN SECTION -->
 		<section class="section-account">
 			<div class="img-backdrop" style="background-image: url('../../assets/img/img16.jpg')"></div>
