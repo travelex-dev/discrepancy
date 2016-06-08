@@ -16,7 +16,6 @@ Route::get('/', 'LoginController@returnPage');
 //Route::post('login', 'LoginController@returnPage');
 
 Route::get('createuser', 'CreateUserController@returnPage');
-
 Route::get('currencyoverview', 'CurrencyOverviewController@returnPage');
 Route::get('dashboard', 'DashboardController@returnPage');
 Route::get('errordetails', 'ErrorDetailsController@returnPage');
@@ -26,5 +25,6 @@ Route::get('listdocumenterrors', 'ListDocumentErrorsController@returnPage');
 Route::post('login', 'LoginController@returnPage');
 Route::get('login', 'LoginController@returnPage');
 Route::get('overview', 'OverviewController@returnPage');
+Route::get('adderror', 'AddErrorController@returnPage');
 
 ?>
