@@ -8,9 +8,9 @@ use App\Http\Requests;
 
 class AddErrorController extends Controller
 {
-    public function returnPage(){
-    
-    	return view('adderror');
-    
-    }
+	    public function returnPage(){
+	    
+	    	return view('adderror');
+	    
+	    }
 }
