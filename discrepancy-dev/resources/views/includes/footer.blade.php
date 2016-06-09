@@ -51,14 +51,15 @@
 			//and previous and next button to toggle between pages.
 			$(document).ready(function() {
 			    $('#datatable1').DataTable();
+			    "aoColumnDefs": [
+			          { 'bSortable': false, 'aTargets': [ -1, -2 ] }
+			       ]
 			} );
 
 			//Remove the sort column icon from the last two columns on the table
-			$('#datatable1').dataTable( {
-			      "aoColumnDefs": [
-			          { 'bSortable': false, 'aTargets': [ -1, -2 ] }
-			       ]
-			});
+		//	$('#datatable1').dataTable( {
+			      
+		//	});
 		</script>
 
 		<!-- END JAVASCRIPT -->
