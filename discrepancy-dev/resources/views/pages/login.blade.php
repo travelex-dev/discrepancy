@@ -12,7 +12,7 @@
 							<br/>
 							<span class="text-lg text-bold text-primary">TAXIDIA</span>
 							<br/><br/>
-							<form class="form floating-label" action="../../html/pages/dashboard.html" accept-charset="utf-8" method="post">
+							<form class="form floating-label" action="dashboard" accept-charset="utf-8" method="post">
 								<div class="form-group">
 									<input type="text" class="form-control" id="username" name="username">
 									<label for="username">Username</label>
@@ -32,7 +32,7 @@
 										</div>
 									</div><!--end .col -->
 									<div class="col-xs-6 text-right">
-										<button class="btn btn-primary btn-raised" type="submit">Login</button>
+										<button class="btn btn-primary btn-raised" type="submit" href="dashboard">Login</button>
 									</div><!--end .col -->
 								</div><!--end .row -->
 							</form>
@@ -42,7 +42,7 @@
 								<h3 class="text-light">
 									No account yet?
 								</h3>
-								<a class="btn btn-block btn-raised btn-primary" href="#">Sign up here</a>
+								<a class="btn btn-block btn-raised btn-primary" href="createuser">Sign up here</a>
 						</div><!--end .col -->
 					</div><!--end .row -->
 				</div><!--end .card-body -->
