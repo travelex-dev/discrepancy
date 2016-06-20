@@ -1,6 +1,10 @@
 @extends('layouts.master')
 
 @section('content')
+
+<!-- Display Validation Errors -->
+        @include('errors.list')
+
 <!-- BEGIN LOGIN SECTION -->
 		<section class="section-account">
 			<div class="img-backdrop" style="background-image: url('../../assets/img/img16.jpg')"></div>
@@ -12,43 +16,57 @@
 							<br/>
 							<span class="text-lg text-bold text-primary">TAXIDIA</span>
 							<br/><br/>
-							<form class="form floating-label" action="dashboard" accept-charset="utf-8" method="post">
-								<div class="form-group">
-									<input type="text" class="form-control" id="username" name="username">
-									<label for="username">Username</label>
-								</div>
-								<div class="form-group">
-									<input type="password" class="form-control" id="password" name="password">
-									<label for="password">Password</label>
-									<p class="help-block"><a href="#">Forgotten?</a></p>
-								</div>
-								<br/>
-								<div class="row">
-									<div class="col-xs-6 text-left">
-										<div class="checkbox checkbox-inline checkbox-styled">
-											<label>
-												<input type="checkbox"> <span>Remember me</span>
-											</label>
-										</div>
-									</div><!--end .col -->
-									<div class="col-xs-6 text-right">
-										<button class="btn btn-primary btn-raised" type="submit" href="dashboard">Login</button>
-									</div><!--end .col -->
-								</div><!--end .row -->
-							</form>
+								{!! Form::open(array('class'=>'form floating-label','role'=>'form','method'=>'POST','url'=>'pages/login')) !!}		
+									<div class="form-group">
+										{!! Form::text('username',null,['class'=>'form-control']) !!}
+										{!! Form::label('username','Username') !!}
+									</div>
+									<div class="form-group">	
+										{!! Form::input('password','password',null,['class'=>'form-control']) !!}
+										{!! Form::label('password','Password') !!}
+										<div class="form-group help-block">
+										{!! link_to('', $title = 'Forgot Your Password?', $attributes = array(), $secure = null); !!}
+									</div>
+									</div>
+									
+									<div class="row">
+									     <div class="col-xs-6 text-left">
+											<div class="checkbox checkbox-inline checkbox-styled">
+												<div class="form-group">
+			                    						<div class="checkbox">
+			                         						 <label>
+			                             						{!! Form::checkbox('remember','') !!} Remember Me
+			                          						</label>
+			                        					</div>
+			                					</div>
+			                				</div>
+										</div><!--end .col -->
+										<div class="col-xs-6 text-right">
+											<div class="form-group">    
+                       							 {!! Form::submit('Login',['class'=>'btn btn-primary btn-raised', 'style'=>'margin-right: 15px;']) !!}                      
+               								 </div>
+										</div><!--end .col -->
+									</div><!--end .row -->
+								{!! Form::close() !!}
 						</div><!--end .col -->
 						<div class="col-sm-5 col-sm-offset-1 text-center">
 							<br><br>
 								<h3 class="text-light">
 									No account yet?
 								</h3>
-								<a class="btn btn-block btn-raised btn-primary" href="createuser">Sign up here</a>
+								  {!! Form::button('Sign up here', ['class'=>'btn btn-block btn-raised btn-primary', 'id'=>'form-submit-button']) !!}
 						</div><!--end .col -->
 					</div><!--end .row -->
 				</div><!--end .card-body -->
 			</div><!--end .card -->
 		</section>
 				<!-- END LOGIN SECTION -->
-
+<script type="text/javascript">
+$(function(){
+  $('#form-submit-button').on('click', function(){
+    $('#form1').submit();
+  });
+})
+</script>
 @stop
 						

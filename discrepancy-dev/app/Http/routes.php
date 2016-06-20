@@ -22,7 +22,7 @@ Route::get('errordetails', 'ErrorDetailsController@returnPage');
 Route::get('feedback', 'FeedbackController@returnPage');
 Route::get('investigatingerrors', 'InvestigatingErrorsController@returnPage');
 Route::get('listdocumenterrors', 'ListDocumentErrorsController@returnPage');
-Route::post('login', 'LoginController@returnPage');
+Route::post('pages/login', 'LoginController@doLogin');
 Route::get('login', 'LoginController@returnPage');
 Route::get('overview', 'OverviewController@returnPage');
 Route::get('adderror', 'AddErrorController@returnPage');
