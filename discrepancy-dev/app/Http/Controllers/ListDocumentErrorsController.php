@@ -12,5 +12,9 @@ class ListDocumentErrorsController extends Controller
         
         	return view('pages/listdocumenterrors');
         
-        }
+    }
+
+
+
+    
 }

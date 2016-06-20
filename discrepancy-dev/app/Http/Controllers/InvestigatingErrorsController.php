@@ -12,5 +12,8 @@ class InvestigatingErrorsController extends Controller
         
         	return view('pages/investigatingerrors');
         
-        }
+    }
+
+
+    
 }

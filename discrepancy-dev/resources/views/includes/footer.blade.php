@@ -47,8 +47,8 @@
 		<script src="assets/js/core/demo/DemoTableDynamic.js"></script>
 		
 		<script type="text/javascript">	
-		    //Include the jquery table functionality for the table like search, page numbers, no of rows to be displayed
-			//and previous and next button to toggle between pages.
+		   																 //Include the jquery table functionality for the table like search, page numbers, no of rows to be displayed
+																		//and previous and next button to toggle between pages.
 			$(document).ready(function() {
 			    $('#datatable1').DataTable();
 			    "aoColumnDefs": [
@@ -56,10 +56,10 @@
 			       ]
 			} );
 
-			//Remove the sort column icon from the last two columns on the table
-		//	$('#datatable1').dataTable( {
+																		//Remove the sort column icon from the last two columns on the table
+																		//$('#datatable1').dataTable( {
 			      
-		//	});
+																		//	});
 		</script>
 
-		<!-- END JAVASCRIPT -->
+																		<!-- END JAVASCRIPT -->

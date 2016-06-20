@@ -1,5 +1,5 @@
 <?php
-//class related to all login and logout methods
+															//class related to all login and logout methods
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -9,7 +9,7 @@ use App\Http\Requests;
 class LoginController extends Controller 
 {
 
-    public function returnPage(){ //This function returns login page
+    public function returnPage(){ 							//This function returns login page
         
         	return view('pages/login');
         
@@ -33,18 +33,17 @@ class LoginController extends Controller
 	            ->withInput(Input::except('password')); 	// send back the input (not the password) so that we can repopulate the form
 	    } else {
 
-	      // create our user data for the authentication
+	      													// create our user data for the authentication
 	        $userdata = array(
 	            'username'  => Input::get('username'),
 	            'password'  => Input::get('password')
 	        );
 	        												
 	        if (Auth::attempt($userdata)){					// attempt to do the login
-	        	//validation successful
+	        												//validation successful so it redirects to correct page
 				return Redirect::to('dashboard'); 			
-	        } else{        
-
-	            // validation not successful, send back to form 
+	        } else{
+	                
 	            return Redirect::to('login');
 	        }
 
@@ -54,8 +53,8 @@ class LoginController extends Controller
 
 	//LOGOUT FUNCTION
 	public function doLogout(){
-	    Auth::logout(); // log the user out of our application
-	    return Redirect::to('login'); // redirect the user to the login screen
+	    Auth::logout(); 									// log the user out of our application
+	    return Redirect::to('login'); 						// redirect the user to the login screen
 	}
 
 
