@@ -21,7 +21,7 @@ class CreateJobItemsTable extends Migration
             $table->integer('cassette_id')->nullable();
             $table->integer('column_id')->nullable();
             $table->integer('quantity');
-            $table->bytea('image')->nullable();
+            $table->binary('image')->nullable();
             $table->string('segmented');
             $table->integer('match_percentage');
             $table->string('match_strap');
