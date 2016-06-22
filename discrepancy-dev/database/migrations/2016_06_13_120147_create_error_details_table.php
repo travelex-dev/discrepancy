@@ -20,7 +20,7 @@ class CreateErrorDetailsTable extends Migration
             $table->integer('error_denom');
             $table->integer('error_quantity');
             $table->integer('exchange_rate_id');
-            $table->integer('discrepancyCost');
+            $table->integer('discrepancy_cost');
             $table->string('state');
             $table->string('root_cause');
             $table->string('specific_cause');

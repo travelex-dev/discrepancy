@@ -21,7 +21,7 @@ class CreateErrorsTable extends Migration
             $table->string('SC_reference')->unique();
             $table->integer('created_by_user_id');
             $table->string('status');
-            $table->string('errors_linked'); // THIS RIGHT HERE IS THE PROBLEM
+            $table->string('errors_linked')->nullable();
             $table->timestamps();
         });
     }
