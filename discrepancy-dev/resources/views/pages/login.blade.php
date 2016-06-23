@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.default')
 
 @section('content')
 
@@ -54,19 +54,17 @@
 								<h3 class="text-light">
 									No account yet?
 								</h3>
-								  {!! Form::button('Sign up here', ['class'=>'btn btn-block btn-raised btn-primary', 'id'=>'form-submit-button']) !!}
+									{!! Form::open(array('class'=>'form floating-label','role'=>'form','method'=>'GET','url'=>'createuser')) !!}
+								  		{!! Form::submit('Sign up here', ['class'=>'btn btn-block btn-raised btn-primary']) !!}
+									{!! Form::close() !!}			  				  
 						</div><!--end .col -->
 					</div><!--end .row -->
 				</div><!--end .card-body -->
 			</div><!--end .card -->
 		</section>
 				<!-- END LOGIN SECTION -->
-<script type="text/javascript">
-$(function(){
-  $('#form-submit-button').on('click', function(){
-    $('#form1').submit();
-  });
-})
-</script>
+
+
+
 @stop
 						

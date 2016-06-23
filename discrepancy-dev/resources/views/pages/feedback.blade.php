@@ -23,17 +23,18 @@
 								<header>Please give feedback</header>                                     <!-- Form heading -->
 							</div>
 							<div class="card-body">				
-							<!-- BEGIN FEEDBACK SECTION -->				
-								<form class="form floating-label" action="../../html/pages/dashboard.html" accept-charset="utf-8" method="post">
+								<!-- BEGIN FEEDBACK SECTION -->	
+								{!! Form::open(array('class'=>'form floating-label','role'=>'form','method'=>'POST','url'=>'pages/feedback')) !!}		
 									<div class="form-group">
-										<input type="text" class="form-control" id="Title">               <!-- Title textbox -->
-										<label for="Title">Title</label>
+										{!! Form::text('title',null,['class'=>'form-control']) !!}
+										{!! Form::label('title','Title') !!}
 									</div>
 									<div class="form-group">
-										<textarea name="Description" id="Description" class="form-control" rows="3" placeholder=""></textarea>                                           
-										<label for="Description">Description</label>                      <!-- Description textbox -->
+										 <!-- Text Area -->			           
+							            {!! Form::textarea('textarea', $value = null, ['class' => 'form-control','rows' => 3]) !!}
+							            {!! Form::label('description', 'Description', ['class' => ' control-label']) !!}
 									</div>
-								</form>
+								{!! Form::close() !!}
 							</div><!--end .card-body -->
 							<div class="card-actionbar">
 								<div class="card-actionbar-row">
