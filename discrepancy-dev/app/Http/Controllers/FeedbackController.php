@@ -27,10 +27,10 @@ class FeedbackController extends Controller
 		
 		if($v->passes()){														//if the form meets all the requirements
 
-			$feedback -> new feedback(); 										//creating an object which is going to store a record of data using the save() function
+			$feedback = new feedback; 										//creating an object which is going to store a record of data using the save() function
 
-			$feedback->feedbackTitle 			= $input['feedbackTitle'];			
-			$feedback->fdescription 			= $input['fdescription'];
+			$feedback->feedback_subject 			= $input['feedbackTitle'];			
+			$feedback->feedback_report				= $input['fdescription'];
 			$feedback->save(); 													//the save function insets a record into the database
 
 			return Redirect::to('pages/feedback');

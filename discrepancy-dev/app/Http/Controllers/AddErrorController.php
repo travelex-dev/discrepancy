@@ -30,13 +30,13 @@ class AddErrorController extends Controller
 		
 		if($v->passes()){													//if the form meets all the requirements
 
-			$error -> new Error(); 											//creating an object which is going to store a record of data using the save() function
+			$error = new Error; 											//creating an object which is going to store a record of data using the save() function
 
-			$error->gcsReference 	= $input['gcsReference'];			
-			$error->scReference 	= $input['scReference'];
-			$error->rapOrderId 		= $input['rapOrderId'];
-			$error->dateRaised 		= $input['dateRaised'];
-			$error->rapPartId 		= $input['rapPartId'];
+			$error->gcs_reference 	= $input['gcsReference'];			
+			$error->sc_reference 	= $input['scReference'];
+			$error->rap_order_id 	= $input['rapOrderId'];
+			$error->date_raised 	= $input['dateRaised'];
+			$error->rap_part_id 	= $input['rapPartId'];
 
 
 			$error->save(); 												//the save function insets a record into the database

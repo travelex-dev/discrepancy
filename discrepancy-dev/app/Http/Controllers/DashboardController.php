@@ -1,5 +1,5 @@
 <?php
-
+//incomplete
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -11,6 +11,6 @@ class DashboardController extends Controller
     public function returnPage(){
         
         	return view('pages/dashboard');
-        
+        	//need to research this section
         }
 }

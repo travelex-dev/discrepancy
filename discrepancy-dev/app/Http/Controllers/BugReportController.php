@@ -28,10 +28,10 @@ class BugReportController extends Controller
 		
 		if($v->passes()){														//if the form meets all the requirements
 
-			$bugreport -> new bugreport(); 										//creating an object which is going to store a record of data using the save() function
+			$bugreport = new bugreport; 										//creating an object which is going to store a record of data using the save() function
 
-			$bugreport->bugTitle 			= $input['bugTitle'];			
-			$bugreport->bugDescription 		= $input['bugDescription'];
+			$bugreport->bug_title		= $input['bugTitle'];			
+			$bugreport->bug_report 		= $input['bugDescription'];
 			$bugreport->save(); 												//the save function insets a record into the database
 
 			return Redirect::to('pages/bugreport');
