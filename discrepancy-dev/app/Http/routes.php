@@ -13,11 +13,17 @@
 
 
 Route::get('/', 'LoginController@returnPage');
+<<<<<<< Updated upstream
 Route::get('login', 'LoginController@returnPage');
 Route::post('pages/login', 'LoginController@doLogin');
 Route::post('pages/createuser', 'CreateUserController@postCreateUser');
 Route::get('createuser', 'CreateUserController@returnPage');
 Route::get('bugreport', 'BugReportController@returnPage');
+=======
+//Route::post('login', 'LoginController@returnPage');
+Route::get('bugreport', 'BugReportController@returnPage');
+Route::post('createuser', 'CreateUserController@returnPage');
+>>>>>>> Stashed changes
 Route::get('currencyoverview', 'CurrencyOverviewController@returnPage');
 Route::get('dashboard', 'DashboardController@returnPage');
 Route::get('errordetails', 'ErrorDetailsController@returnPage');
