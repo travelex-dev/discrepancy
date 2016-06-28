@@ -41,25 +41,10 @@
 		{!! HTML::script('assets/js/libs/multi-select/jquery.multi-select.js') !!}
 		{!! HTML::script('assets/js/libs/inputmask/jquery.inputmask.bundle.min.js') !!}
 		{!! HTML::script('assets/js/libs/moment/moment.min.js') !!}
-		{!! HTML::script('assets/js/libs/bootstrap-datepicker/bootstrap-datepicker.jss') !!}
+		{!! HTML::script('assets/js/libs/bootstrap-datepicker/bootstrap-datepicker.js') !!}
 		{!! HTML::script('assets/js/libs/bootstrap-colorpicker/bootstrap-colorpicker.min.js') !!}
 		{!! HTML::script('assets/js/core/demo/DemoFormComponents.js') !!}
 		{!! HTML::script('assets/js/core/demo/DemoTableDynamic.js') !!}
 		
-		<script type="text/javascript">	
-		    //Include the jquery table functionality for the table like search, page numbers, no of rows to be displayed
-			//and previous and next button to toggle between pages.
-			$(document).ready(function() {
-			    $('#datatable1').DataTable();
-			    "aoColumnDefs": [
-			          { 'bSortable': false, 'aTargets': [ -1, -2 ] }
-			       ]
-			} );
-
-			//Remove the sort column icon from the last two columns on the table
-		//	$('#datatable1').dataTable( {
-			      
-		//	});
-		</script>
-
+		
 		<!-- END JAVASCRIPT -->

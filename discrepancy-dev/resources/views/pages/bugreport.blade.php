@@ -11,6 +11,10 @@
 			<!-- BEGIN CONTENT-->
 			<div id="content">
 				<!-- BEGIN BLANK SECTION -->
+
+				<!-- Display Validation Errors -->
+        		@include('errors.list')
+
 				<section>
 					<div class="section-header">
 						<ol class="breadcrumb">
@@ -25,21 +29,24 @@
 							</div>
 							<div class="card-body">	
 																									    <!-- BEGIN BUG REPORT SECTION -->		
-								<form class="form floating-label" action="../../html/pages/dashboard.html" accept-charset="utf-8" method="post">
-										<div class="form-group">
-											<input type="text" class="form-control" id="ProblemTitle">  <!-- Problem title textbox-->
-											<label for="ProblemTitle">Problem Title</label>
+								{!! Form::open(array('class'=>'form floating-label','role'=>'form','method'=>'POST','url'=>'pages/bugreport')) !!}		
+									<div class="form-group">
+										{!! Form::text('bugTitle',null,['class'=>'form-control']) !!}<!-- Problem title textbox-->
+										{!! Form::label('bugTitle','Problem Title') !!}
+									</div>
+									<div class="form-group">
+										 <!-- Text Area -->			           
+							            {!! Form::textarea('bugDescription', $value = null, ['class' => 'form-control','rows' => 3]) !!}<!-- Summary information textbox -->
+							            {!! Form::label('bugDescription', 'Summary Information') !!}
+									</div>
+									<div class="card-actionbar">
+										<div class="card-actionbar-row">								 
+											<div class="form-group">    
+		                       					{!! Form::submit('SUBMIT',['class'=>'btn btn-primary btn-raised']) !!}      <!-- Submit button-->
+		               						</div>
+		               						{!! Form::close() !!}   								<!-- END BUG REPORT SECTION -->
 										</div>
-										<div class="form-group">
-											<textarea name="SummaryInformation" id="SummaryInformation" class="form-control" rows="3" placeholder=""></textarea>
-											<label for="SummaryInformation">Summary Information</label>  <!-- Summary information textbox -->
-										</div>								
-										<div class="card-actionbar">
-											<div class="card-actionbar-row">
-												<button class="btn btn-primary btn-raised" type="submit">SUBMIT</button> <!-- Submit button-->
-											</div>
-										</div>		
-								</form>	<!-- END BUG REPORT SECTION -->					
+									</div> 
 							</div><!--end .card-body -->
 						</div> <!--end .card -->
 					</div><!--end .section-body-->

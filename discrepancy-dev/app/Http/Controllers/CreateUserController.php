@@ -23,15 +23,16 @@ class CreateUserController extends Controller
 
         
         }
+
 	public function postCreateUser(){
 
 		$input	=	Input::all();
 		$rules	=	array(	 									
-			'first_name' 	=> 	'required|min:1|max:128',
-			'last_name' 		=> 	'required|min:1|max:128',
-			'username' 		=> 	'required|unique:users',
-			'email' 		=> 	'required|email|unique:users',
-			'password' 		=>	'required|alphaNum|min:3|max:128');
+							'firstName' 	=> 	'required|min:1|max:128', 			//this field is required, and is in the users table
+							'lastName' 		=> 	'required|min:1|max:128',
+							'username' 		=> 	'required|min:4|unique:users',
+						 	'email' 		=> 	'required|email|unique:users',
+						 	'password' 		=>	'required|alphaNum|min:3|max:128');
 
 		$v = Validator::make($input, $rules);
 
@@ -41,15 +42,16 @@ class CreateUserController extends Controller
 			$password = $input['password'];
 			$password = hash::make($password);
 
-			$user -> new User();
-			$user->first_name 	= $input['first_name'];
-			$user->last_name	= $input['last_name'];
-			$user->username 	= $input['username'];
-			$user->email 		= $input['email'];
-			$user->password 	= $password;
-			$user->save();													
+			 $user = new User;
 
-		 	return Redirect::to('dashboard');
+			 $user->first_name 	= $input['firstName'];
+			 $user->last_name	= $input['lastName'];
+			 $user->username 	= $input['username'];
+			 $user->email 		= $input['email'];
+			 $user->password 	= $password;
+			 $user->save();													//the save function inserts a record into the database
+
+		 	return Redirect::to('/');
 		}else{
 			return Redirect::to('createuser')->withInput()->withErrors($v); 	//returns the user to the create user page with the error specified
 		}
