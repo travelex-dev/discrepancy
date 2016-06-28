@@ -24,7 +24,15 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    public function feedbacks(){
-        return $this->hasMany('App/Feedback');
+    public function feedback_reports(){
+        return $this->hasMany('App\Feedback_report');
+    }
+
+    public function bug_reports(){
+        return $this->hasMany('App\Bug_report');
+    }
+
+    public function errors(){
+        return $this->hasMany('App\Error');
     }
 }

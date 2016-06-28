@@ -9,7 +9,7 @@ use Validator;
 use Input;
 use Redirect;
 use Auth;
-use App\Feedback;
+use App\Feedback_report;
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Eloquent\Model;
 use Hash;
@@ -36,7 +36,7 @@ class FeedbackController extends Controller
 		if($v->passes()){	
 														//if the form meets all the requirements
 
-			$feedback = new Feedback; 										//creating an object which is going to store a record of data using the save() function
+			$feedback = new Feedback_report; 										//creating an object which is going to store a record of data using the save() function
 			$feedback->feedback_subject 			= $input['feedbackTitle'];			
 			$feedback->feedback_report				= $input['feedbackDescription'];
 			$feedback->user_id = Auth::user()->id;
