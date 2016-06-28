@@ -27,11 +27,11 @@ class CreateUserController extends Controller
 
 		$input	=	Input::all();
 		$rules	=	array(	 									
-							'firstName' 	=> 	'required|min:1|max:128', 			//this field is required, and is in the users table
-							'lastName' 		=> 	'required|min:1|max:128',
-							'username' 		=> 	'required|unique:users',
-						 	'email' 		=> 	'required|email|unique:users',
-						 	'password' 		=>	'required|alphaNum|min:3|max:128');
+			'firstName' 	=> 	'required|min:1|max:128',
+			'lastName' 		=> 	'required|min:1|max:128',
+			'username' 		=> 	'required|unique:users',
+			'email' 		=> 	'required|email|unique:users',
+			'password' 		=>	'required|alphaNum|min:3|max:128');
 
 		$v = Validator::make($input, $rules);
 
@@ -41,14 +41,13 @@ class CreateUserController extends Controller
 			$password = $input['password'];
 			$password = hash::make($password);
 
-			 $user = new User;
-
-			 $user->first_name 	= $input['firstName'];
-			 $user->last_name	= $input['lastName'];
-			 $user->username 	= $input['username'];
-			 $user->email 		= $input['email'];
-			 $user->password 	= $password;
-			 $user->save();													//the save function inserts a record into the database
+			$user = new User;
+			$user->first_name 	= $input['firstName'];
+			$user->last_name	= $input['lastName'];
+			$user->username 	= $input['username'];
+			$user->email 		= $input['email'];
+			$user->password 	= $password;
+			$user->save();													
 
 		 	return Redirect::to('dashboard');
 		}else{

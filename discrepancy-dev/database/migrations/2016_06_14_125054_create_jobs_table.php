@@ -34,8 +34,6 @@ class CreateJobsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('jobs', function (Blueprint $table) {
-            //
-        });
+        Schema::drop('jobs');
     }
 }
