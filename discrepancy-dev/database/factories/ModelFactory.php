@@ -24,14 +24,13 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
 //error_factory
 $factory->define(App\Error::class, function (Faker\Generator $faker) {
     return [
-        
-        $table->integer 'order_id'=> $faker->numberBetween($min = 1000000, $max = 1300000),
-        $table->integer 'rap_order_id'=> $faker->numberBetween($min = 40165000, $max = 40300000),
-        $table->integer 'rap_part_id'=> $faker->numberBetween($min = 1, $max = 3),
-        $table->integer 'gcs_reference'=> $faker->numberBetween($min = 20151200, $max = 20151600),
-        $table->string 'sc_reference'=> $faker->numerify('SC201####'),
-        $table->integer 'created_by_user_id'=> $faker->numberBetween($min = 1, $max = 5),
-        $table->string 'status'=> $faker->randomElement($array = array ('New','In Progress','Further Investigation', 'Complete')),
+        'order_id'=> $faker->numberBetween($min = 1000000, $max = 1300000),
+        'rap_order_id'=> $faker->numberBetween($min = 40165000, $max = 40300000),
+        'rap_part_id'=> $faker->numberBetween($min = 1, $max = 3),
+        'gcs_reference'=> $faker->numberBetween($min = 20151200, $max = 20151600),
+        'sc_reference'=> $faker->numerify('SC201####'),
+        'created_by_user_id'=> $faker->numberBetween($min = 1, $max = 5),
+        'status'=> $faker->randomElement($array = array ('New','In Progress','Further Investigation', 'Complete')),
         //$table->string 'errors_linked'=> $faker->
         //$table->timestampTz 'date_raised'=> $faker->
     ];
