@@ -17,7 +17,7 @@ class DatabaseSeeder extends Seeder {
 
       $this->call('UserTableSeeder');
       $this->call('ErrorsTableSeeder');
-  //    $this->call('ErrorDetailsTableSeeder');
+      $this->call('ErrorDetailsTableSeeder');
   }
 
 }

@@ -7,7 +7,12 @@ class UserTableSeeder extends Seeder
 {
 
 	public function run(){
-	    DB::table('users')->delete();
+
+  factory(App\User::class, 3)->create()->each(function($u) {
+    $u->issues()->save(factory(App\Error::class)->make());
+  });
+
+	    /*DB::table('users')->delete();
 	    User::create(array(
 	        'first_name'     => 'Azhar',
 	        'last_name'     => 'Ahmad',
@@ -28,7 +33,7 @@ class UserTableSeeder extends Seeder
 	        'username' => 'oliver12',
 	        'email'    => 'blokey@test.com',
 	        'password' => Hash::make('postgres'),
-	    ));
+	    ));*/
 	}
 
 }

@@ -16,6 +16,7 @@ class Error extends Model
         'order_id', 'rap_order_id', 'rap_part_id', 'gcs_reference', 'sc_reference', 'created_by_user_id', 'status', 'errors_linked', 'date_raised',
     ];
 
-
+    public function users(){
+    	return $this->belongsTo('discrepancy\User');
 
 }
