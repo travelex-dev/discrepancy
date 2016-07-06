@@ -1,5 +1,7 @@
 <?php
 use App\User;
+use App\Error;
+use Database\factories\ModelFactory;
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Eloquent\Model;
 
@@ -8,12 +10,12 @@ class UserTableSeeder extends Seeder
 
 	public function run(){
 
-  factory(App\User::class, 3)->create()->each(function($u) {
-    $u->issues()->save(factory(App\Error::class)->make());
-  });
+		DB::table('users')->delete();
 
-	    /*DB::table('users')->delete();
-	    User::create(array(
+  		factory(App\User::class, 5)->create(); // ->each(function($u) {$u->errors()->save(factory(App\Error::class)->make());})
+
+	    
+	    /*User::create(array(
 	        'first_name'     => 'Azhar',
 	        'last_name'     => 'Ahmad',
 	        'username' => 'azhar52',

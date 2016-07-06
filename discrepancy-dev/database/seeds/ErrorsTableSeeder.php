@@ -1,5 +1,6 @@
 <?php
-
+use App\Error;
+use Database\factories\ModelFactory;
 use Illuminate\Database\Seeder;
 use Carbon\Carbon;
 
@@ -13,7 +14,11 @@ class ErrorsTableSeeder extends Seeder
     public function run()
     {
         DB::table('errors')->delete();
-	    DB::table('errors')->insert([
+
+        factory(App\Error::class, 15)->create();
+
+
+	    /*DB::table('errors')->insert([
             'order_id'				=> '925473',
             'rap_order_id'          => '40183427',
             'rap_part_id'           => '1',
@@ -60,6 +65,6 @@ class ErrorsTableSeeder extends Seeder
             'errors_linked'     	=> '20151314',
             'created_at' 			=> Carbon::now()->addHour(),
             'updated_at' 			=> Carbon::now()->addHour(),
-	    ]);
+	    ]);*/
     }
 }

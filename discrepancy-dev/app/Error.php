@@ -18,5 +18,6 @@ class Error extends Model
 
     public function users(){
     	return $this->belongsTo('discrepancy\User');
+}
 
 }
