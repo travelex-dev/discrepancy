@@ -16,15 +16,11 @@ class CreateErrorDetailsTable extends Migration
             
             $table->increments('id');
             $table->integer('error_id');
-            $table->integer('customer_id');
-            $table->boolean('error_difference'); // If TRUE, then short; If FALSE, then OVER
-            $table->string('error_currency');
-            $table->integer('error_denom');
-            $table->integer('error_quantity');
-            $table->integer('exchange_rate_id');
-            $table->float('discrepancy_cost (£)');
+            $table->integer('value_item_id');
+            $table->integer('quantity');
+            $table->float('exchange_rate');
             $table->string('state');
-            $table->string('root_cause')->nullable();
+            $table->integer('root_cause_id')->nullable();
             $table->string('specific_cause')->nullable();
         });
     }

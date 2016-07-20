@@ -16,6 +16,7 @@ class CreateErrorsTable extends Migration
 
             $table->increments('id');
             $table->integer('order_id');
+            $table->integer('customer_id');
             $table->integer('rap_order_id');
             $table->integer('rap_part_id');
             $table->integer('gcs_reference');

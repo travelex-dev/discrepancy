@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateExchangeRateTable extends Migration
+class CreateRootCausesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,12 +12,10 @@ class CreateExchangeRateTable extends Migration
      */
     public function up()
     {
-        Schema::create('exchange_rate', function (Blueprint $table) {
+        Schema::create('root_causes', function (Blueprint $table) {
 
             $table->increments('id');
-            $table->string('currency');
-            $table->float('exchange_rate');
-            $table->date('updated_at');
+            $table->string('name');
         });
     }
 
@@ -28,6 +26,7 @@ class CreateExchangeRateTable extends Migration
      */
     public function down()
     {
-        Schema::drop('exchange_rate');
+        Schema::drop('root_causes');
     }
 }
+
